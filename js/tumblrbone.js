@@ -1,8 +1,7 @@
 $(document).ready(function(){
     var Tumblr = Tumblr || {};
 
-    Tumblr.apiURL = 'http://api.tumblr.com/v2/blog/<blog url>';
-    Tumblr.apiKey = '<tumblr api key>';
+    Tumblr.apiURL = 'http://littlelazer.tumblr.com/api/read/json';
     Tumblr.posts;
 
     Tumblr.TumblrPostModel = Backbone.Model.extend({});
@@ -57,8 +56,8 @@ $(document).ready(function(){
                 jsonp : 'jsonp'
             })
                 .success(function(json) {
-                    Tumblr.posts = json;
-                    Tumblr.myTumblr.tumblog.add(Tumblr.posts.response.posts);
+                    Tumblr.posts = json.posts;
+                    Tumblr.myTumblr.tumblog.add(Tumblr.posts);
                     //Tumblr.myTumblr.render();
                 });
         },
