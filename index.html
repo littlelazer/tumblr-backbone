@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tumblr with Backbone</title>
+        <link rel="stylesheet" type="text/css" href="css/tumblrbone.css">
+    </head>
+    <body>
+        <ul id="tumblrblog"></ul>
+        <script id="linkTemplate" type="text/template">  
+            <%= url %>
+            <%= post_url %>
+            <%= title %>
+            <%= description %>
+            <%= date %>
+        </script>
+        <script id="quoteTemplate" type="text/template">
+            <%= text %>
+            <%= post_url %>
+            <%= source %>
+            <%= date %>
+        </script>
+        <script id="textTemplate" type="text/template">
+            <%= title %>
+            <%= post_url %>
+            <%= body %>
+            <%= date %>
+        </script>
+        <script id="photoTemplate" type="text/template">
+            <%= post_url %>
+            <%= date %>
+            <%= caption %>
+        </script>
+        <script id="chatTemplate" type="text/template">
+            <%= post_url %>
+            <%= date %>
+            <%= title %>
+            <%= body %>
+            <%= dialogue %>
+        </script>
+        <script id="audioTemplate" type="text/template">
+            <%= post_url %>
+            <%= source_url %>
+            <%= source_title %>
+            <%= id3_title %>
+            <%= caption %>
+            <%= player %>
+            <%= plays %>
+        </script>
+        <script id="videoTemplate" type="text/template">
+            <%= post_url %>
+            <%= date %>
+            <%= source_url %>
+            <%= source_title %>
+            <%= caption %>
+            <%= player %>
+        </script>
+        <script id="answerTemplate" type="text/template">
+            <%= date %>
+            <%= post_url %>
+            <%= asking_name %>
+            <%= asking_url %>
+            <%= question %>
+            <%= answer %>
+        </script>
+        <!-- http://javascriptplayground.com/blog/2012/06/backbone-js-tutorial-2 -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script src="js/underscore-1_3_3.js"></script>
+        <script src="js/backbone-0_9_2.js"></script>
+        <script src="js/tumblrbone.js"></script>
+    </body>
+</html>
